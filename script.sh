@@ -11,12 +11,12 @@ echo "Script de Instalação do Shadowsocks na Oracle Cloud (By Lukinhas)"
 echo " ################################################################### "
 
 ## Abrir portas para o Shadowsocks
-echo "Instalando o Firewalld para abrir as portas necessárias do Shadowsocks."
+echo "Instalando o Firewalld para abrir a porta necessária do Shadowsocks."
 apt-get install firewalld -y
-firewall-cmd --permanent --zone=public --add-port=0-65535/tcp
-firewall-cmd --permanent --zone=public --add-port=0-65535/udp
+firewall-cmd --permanent --zone=public --add-port=8388/tcp
+firewall-cmd --permanent --zone=public --add-port=8388/udp
 firewall-cmd --reload
-echo "Portas do Shadowsocks abertas com sucesso!"
+echo "Porta do Shadowsocks abertas com sucesso!"
 sleep 1
 
 ## Instalação do Shadowsocks
@@ -82,6 +82,8 @@ echo "root hard nofile 51200" >> $file2
 
 sleep 1
 
+touch /etc/sysctl.conf
+
 echo "fs.file-max = 51200
 net.core.netdev_max_backlog = 250000
 net.core.somaxconn = 4096
@@ -118,14 +120,14 @@ IP_Server=$(hostname -I | awk '{ print $1}')
 echo "Seu servidor Shadowsocks está pronto!"
 echo " "
 echo "
-################################################
-################################################
-||Servidor          : $IP_Server              ||      
-||Porta             : 8838                    ||
-||Senha             : Proxy                   ||
-||Encriptação       : xchacha20-ietf-poly1305 ||
-################################################
-################################################
+#################################################
+#################################################
+|| Servidor          : $IP_Server              ||      
+|| Porta             : 8838                    ||
+|| Senha             : Proxy                   ||
+|| Encriptação       : xchacha20-ietf-poly1305 ||
+#################################################
+#################################################
 "
 
 echo "Para mudar a senha do servidor, execute o comando abaixo:"
