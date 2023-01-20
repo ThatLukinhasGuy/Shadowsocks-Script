@@ -125,14 +125,14 @@ IP_Server=$(hostname -I | awk '{ print $1}')
 echo "Seu servidor Shadowsocks está pronto!"
 echo " "
 echo "
-#################################################
-#################################################
-|| Servidor          : $IP_Server              ||      
-|| Porta             : 8838                    ||
-|| Senha             : Proxy                   ||
-|| Encriptação       : xchacha20-ietf-poly1305 ||
-#################################################
-#################################################
+################################################
+################################################
+||Servidor          : $IP_Server              ||      
+||Porta             : 8838                    ||
+||Senha             : Proxy                   ||
+||Encriptação       : xchacha20-ietf-poly1305 ||
+################################################
+################################################
 "
 
 echo "Para mudar a senha do servidor, execute o comando abaixo:"
