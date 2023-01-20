@@ -10,6 +10,11 @@ echo " ################################################################### "
 echo "Script de Instalação do Shadowsocks na Oracle Cloud (By Lukinhas)"
 echo " ################################################################### "
 
+## Atualizar pacotes
+apt-get update -y
+apt-get upgrade -y
+sleep 1
+
 ## Abrir portas para o Shadowsocks
 echo "Instalando o Firewalld para abrir a porta necessária do Shadowsocks."
 apt-get install firewalld -y
@@ -66,7 +71,7 @@ WantedBy=multi-user.target" > /etc/systemd/system/shadowsocks-libev-server@.serv
 sleep 1
 
 cat /etc/systemd/system/shadowsocks-libev-server@.service
-sleep1
+sleep 1
 
 sudo systemctl enable --now shadowsocks-libev-server@config
 sleep 1
