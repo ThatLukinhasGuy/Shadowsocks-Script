@@ -6,9 +6,9 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
-echo " ################################################################### "
-echo "Script de Instalação do Shadowsocks na Oracle Cloud (By Lukinhas)"
-echo " ################################################################### "
+echo " ################################################################# "
+echo "  Script de Instalação do Shadowsocks em VPS Ubuntu (By Lukinhas)  "
+echo " ################################################################# "
 
 ## Atualizar pacotes
 apt-get update -y
