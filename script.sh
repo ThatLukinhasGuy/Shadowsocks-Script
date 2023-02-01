@@ -46,7 +46,7 @@ echo "{" > $arquivo
 echo "    \"server\":[\"0.0.0.0\"]," >> $arquivo
 echo "    \"server_port\":8388," >> $arquivo
 echo "    \"password\":\"Proxy\"," >> $arquivo
-echo "    \"method\":\"chacha20-ietf-poly1305\"," >> $arquivo
+echo "    \"method\":\"rd4-md5\"," >> $arquivo
 echo "}" >> $arquivo
 echo "Configuração criada com sucesso!"
 
