@@ -1,6 +1,7 @@
 # Shadowsocks-Script
 Script de instalação do Shadowsocks.
 
+
 ## Como usar o Script
 Execute o seguinte comando:
 ```
