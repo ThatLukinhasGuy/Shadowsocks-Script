@@ -46,7 +46,7 @@ echo "{" > $arquivo
 echo "    \"server\":[\"0.0.0.0\"]," >> $arquivo
 echo "    \"server_port\":8388," >> $arquivo
 echo "    \"password\":\"Proxy\"," >> $arquivo
-echo "    \"method\":\"rd4-md5\"," >> $arquivo
+echo "    \"method\":\"rc4-md5\"," >> $arquivo
 echo "}" >> $arquivo
 echo "Configuração criada com sucesso!"
 
@@ -125,14 +125,14 @@ IP_Server=$(hostname -I | awk '{ print $1}')
 echo "Seu servidor Shadowsocks está pronto!"
 echo " "
 echo "
-################################################
-################################################
-||Servidor          : $IP_Server              ||      
-||Porta             : 8838                    ||
-||Senha             : Proxy                   ||
-||Encriptação       : xchacha20-ietf-poly1305 ||
-################################################
-################################################
+#################################################
+#################################################
+|| Servidor          : $IP_Server              ||      
+|| Porta             : 8838                    ||
+|| Senha             : Proxy                   ||
+|| Encriptação       : rc4-md5                 ||
+#################################################
+#################################################
 "
 
 echo "Para mudar a senha do servidor, execute o comando abaixo:"
